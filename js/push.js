@@ -8,5 +8,5 @@ function push(event) {
     // Load content for this tab/page
     load_content(id);
     // Finally push state change to the address bar
-    window.history.pushState({id}, `${id}`, `/html/${id}`);
+    // window.history.pushState({id}, `${id}`, `/html/${id}`);
 }

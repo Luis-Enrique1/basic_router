@@ -5,15 +5,8 @@ window.onload = event => {
     window["gallery"].addEventListener("click", event => push(event))
     window["contact"].addEventListener("click", event => push(event))
     window["help"].addEventListener("click", event => push(event))
+
+    select_tab("home")
+    load_content("home")
+    push({target: {id: "home"}})
 }
-// Listen for PopStateEvent (Back or Forward buttons are clicked)
-window.addEventListener("popstate", event => {
-    // Grab the history state id
-    let stateId = event.state.id;
-    // Show clicked id in console (just for fun)
-    console.log("stateId = ", stateId);
-    // Visually select the clicked button/tab/box
-    select_tab(stateId);
-    // Load content for this tab/page
-    loadContent(id);
-});
